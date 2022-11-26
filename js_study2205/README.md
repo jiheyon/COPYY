@@ -5,7 +5,7 @@
 ```shell script
 $ mkdir json-server-exam
 $ cd json-server-exam
-$ npm init -y
+$ npm init -y 
 $ npm install json-server -D
 ```
 

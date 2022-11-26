@@ -125,7 +125,7 @@
                 //응답코드
                 console.log(xhr.status); 
                 //응답 데이터 확인
-                //console.log(xhr.response);
+                //console.log(xhr.response); // 생긴건 자바스크립트 같은데 JSON임! 이걸 JS로 바꿔야 데이터를 가져올 수 있음
 
                 if (xhr.status === 200) {                    
                     makeResultDOM(xhr.response);

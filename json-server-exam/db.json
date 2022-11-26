@@ -1,0 +1,57 @@
+{
+  "pets": [
+    {
+      "id": 1,
+      "kind": "강아지",
+      "name": "뽀삐",
+      "age": 3
+    },
+    {
+      "id": 2,
+      "kind": "고양이",
+      "name": "참새",
+      "age": 2
+    },
+    {
+      "id": 3,
+      "kind": "거북이",
+      "name": "느림보",
+      "age": 99
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "account": "abc123",
+      "userName": "김철수",
+      "address": "서울시 중구"
+    },
+    {
+      "id": 3,
+      "account": "ghi0999",
+      "userName": "영희팍",
+      "address": "로스앤젤레스"
+    },
+    {
+      "id": 4,
+      "account": "",
+      "userName": "",
+      "password": "",
+      "address": ""
+    },
+    {
+      "id": "5",
+      "account": "peach",
+      "userName": "t",
+      "password": "12",
+      "address": "ㅅㅄㅇㅀ"
+    },
+    {
+      "id": "6",
+      "account": "peachㅇ",
+      "userName": "사",
+      "password": "12",
+      "address": "사과"
+    }
+  ]
+}

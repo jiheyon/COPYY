@@ -18,7 +18,7 @@ console.log(decrease()); // -1
 console.log(decrease()); // -2
 console.log(increase()); // 4
 */
-
+/*
 const c = (function() {       // 에러남, 함수를 정의한거지 부른게 아님
     let num = 0;
 
@@ -41,6 +41,8 @@ console.log(c.increase()); // 2
 
 // 콜백이 포함된(이용한) 클로저 
 console.log(`============콜백 클로저 실행=============`);
+*/
+
 
 /*
 const counter = function (callback) => {          // 함수를 받으면 그 함수(callback(num))를 불러서 
@@ -48,6 +50,7 @@ const counter = function (callback) => {          // 함수를 받으면 그 함
 };());
 */
 
+/*
 const counter = (() => {        // 즉시호출
 
     let num = 0;                    // 여기서 선언 안하면 값이 0으로 계속 세팅됨, num이 유지가 안됨
@@ -67,7 +70,7 @@ console.log(counter(n => n / 2));  // 나눔 되었는지
 
 console.log(counter(n => ++n));  // increase
 console.log(counter(n => --n));  // decrease
-
+*/
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -76,6 +79,7 @@ console.log(counter(n => --n));  // decrease
 // 콜백을 이용한 클로저 -  쉬운 풀이 버전
 
 
+/*
 function abc() {
     let num = 0;        // 본인 지역변수로 num  가지고 있음
 
@@ -95,4 +99,28 @@ function triple(m){
 const n = co(triple); // 여긴 함수 필요/ 콜백 자리에 triple을 불렀음, triple 콜 할때 값 num을 줬음
 // num = callback(num)  그 값을 넘에 다시 넣어줬음
 // 
+*/
 
+////////////////////////////////////////////////
+///////////////////////////////////////////////
+
+// 기능 두가지만 쓰는 경우 매번 부르기 귀찮음
+const counter = (() => {
+
+    let num = 0;
+
+    return (callback) => {
+        return num = callback(num);
+    };
+})();
+
+const increase = n => ++n;
+const decrease = n => --n;
+
+console.log(counter(increase));
+console.log(counter(increase));
+console.log(counter(decrease));
+console.log(counter(decrease));
+console.log(counter(increase));
+console.log(counter(increase));
+console.log(counter(increase));// 2

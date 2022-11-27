@@ -31,9 +31,9 @@
     <script>
 
         //노드탐색의 기점이 되는 요소 취득        
-        const $fruits = document.querySelector('#fruits');
+        const $fruits = document.querySelector('#fruits'); // # > id임
 
-        const $wrap = $fruits.parentElement;
+        const $wrap = $fruits.parentElement;    // div가 잡힘
         console.log($wrap);
 
         const $banana = document.querySelector('#fruits > li:nth-child(2)');
@@ -41,16 +41,17 @@
         //부모노드 탐색
         const $ul = $banana.parentElement;
         console.log($ul);
+        //      console.log($ul === $fruits);
 
-        console.log($banana.parentElement.parentElement);
-        console.log($banana.parentElement.parentElement.parentElement);
-        console.log($banana.parentElement.lastElementChild);
+        console.log($banana.parentElement.parentElement);   // 부모의 부모 > 
+        console.log($banana.parentElement.parentElement.parentElement); // 부 부 부모 > 바디
+        console.log($banana.parentElement.lastElementChild);        // 포도 
 
-        // 다음 형제노드 탐색
+        // 다음 형제노드 탐색(아래)
         console.log($banana.nextElementSibling);
 
-        // 이전 형제노드 탐색
-        console.log($banana.previousElementSibling);
+        // 이전 형제노드 탐색(위)
+        console.log($banana.previousElementSibling);  
        
 
         //테이블 요소노드 취득

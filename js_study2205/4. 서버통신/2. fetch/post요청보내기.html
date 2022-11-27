@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // 애완동물 데이터 추가하기(삽입=post요청)
+        //fetch('http://localhost:5000/pets') // 여기서 .then하면 GET으로 진행되는거임
+/*
+
+        // 새로운 애완동물 데이터
+        const newPet = {
+            id: 5,
+            name: '꼬꼬',
+            kind: '앵무새',
+            age: 3
+        };
+
+        // GET을 제외한 요청시 사용할 초기화정보 객체
+        const requestInit = {   // 아래 형태는 모두 정해져있음
+            method: 'POST',      // 요청 방식
+            headers: {
+                'content-type': 'application/json'
+            },        // 요청 헤더 정보(기본적인건 턴넽드 타입 필수)
+            body: JSON.stringify(newPet)    // ★ 서버로 보낼 데이터, 함수캡술하+  자바객체니까 json으로 변형 후 보내기
+         };
+ 
+         fetch('http://localhost:5000/pets', requestInit) // 두번째 파라미터 필수
+         .then(res => {
+            console.log(res);
+         });
+*/
+          
+        const requestInit = {   // 아래 형태는 모두 정해져있음
+            method: 'POST',      // 요청 방식
+            headers: {  
+                'content-type': 'application/json'   
+            },        // 요청 헤더 정보(기본적인건 턴넽드 타입 필수)
+            body: JSON.stringify({
+                title: 'fetch 복습하기'
+            })    // ★ 서버로 보낼 데이터, 함수캡술하+  자바객체니까 json으로 변형 후 보내기
+         };
+ 
+         fetch('http://localhost:8181/api/todos', requestInit) // 두번째 파라미터 필수
+         .then(res => res.json())
+         .then(todos => {
+            console.log(todos);
+         });
+
+    </script>
+    
+</body>
+</html>

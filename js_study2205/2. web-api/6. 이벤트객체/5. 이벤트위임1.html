@@ -44,7 +44,8 @@
         const activate = e => {
 
             //이벤트 발생 타겟을 제한
-            if (!e.target.matches('#fruits > li')) {
+            // = ul을 눌렀을때는 이벤트 제한, li만 반응하게끔!
+            if (!e.target.matches('#fruits > li')) {    // 만약에 이벤트가 발생한 녀석이 li가 아니면 리턴(아래 코드 안돌아감)
                 return;
             }
 
@@ -56,13 +57,13 @@
                 }
             }
 
-            //2. 클릭대상 li태그에 class=active 부여
+            //2. 클릭대상 li태그에 class=active 부여  // 누굴 누른지 e에서 받아옴, 그 클래스에 엑티브를 추가해라
             e.target.classList.add('active');
 
-            //3. 클릭한 li태그에 있는 텍스트를 복사해서 em태그의 텍스트로 삽입
             
+            //3. 클릭한 li태그에 있는 텍스트를 복사해서 em태그의 텍스트로 삽입
             const $em = document.querySelector('.msg');
-            $em.textContent = e.target.textContent;
+            $em.textContent = e.target.textContent; // e.target = 클릭한 타겟임, em테그의 텍스트로 수정해라!
         };
 
         //이벤트 핸들러 바인딩
@@ -70,8 +71,8 @@
         //     $li.onclick = activate;
         // }
 
-        //ul에 이벤트부여 후 버블링 사용
-        $fruits.onclick = activate;
+        // ul에 이벤트부여 후 버블링 사용
+         $fruits.onclick = activate;
 
     </script>
 

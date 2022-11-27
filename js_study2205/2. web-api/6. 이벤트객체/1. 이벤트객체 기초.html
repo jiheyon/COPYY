@@ -13,7 +13,8 @@
 
     <script>
 
-        document.onclick = function(e) {
+        document.onclick = function(e) {    // document.onclick  브라우저 전체영역에 이벤트가 걸림
+           // console.log('클릭이벤트 발생!');
             console.log(e);
             const $msg = document.querySelector('.msg');
             $msg.textContent = `x: ${e.x}, y: ${e.y}`;

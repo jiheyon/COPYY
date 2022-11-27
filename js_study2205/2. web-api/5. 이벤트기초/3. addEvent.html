@@ -13,7 +13,8 @@
     <button id="btn">클릭하세요!</button>
 
     <script>
-        //이벤트 핸들러 함수
+        // 이벤트 핸들러 함수
+        // 이벤트 여러개 걸 수 있음
         function hello() {
             alert('안녕~');
         }
@@ -22,18 +23,18 @@
 
         /*
         $btn.onclick = hello;
-        $btn.onclick = function () {
+        $btn.onclick = function () {        // 위에 hello 사라짐, 중복작동 안됨
             $btn.style.background = 'aqua';
         }
         */
 
         $btn.addEventListener('click', hello);
-        $btn.addEventListener('click', function() {
+        $btn.addEventListener('click', function() {  
             $btn.style.background = 'aqua';
         });
 
         //이벤트 핸들러 제거
-        $btn.removeEventListener('click', hello);
+        $btn.removeEventListener('click', hello); // 아룸 없는건 삭제 불가능, 삭제 필요한 작업인 경우 이름 붙여주기
     </script>
 
 </body>

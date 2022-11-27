@@ -14,15 +14,18 @@
         const $inp = document.querySelector('input');
 
         console.log($inp.attributes);
-        console.log($inp.attributes[1]);
-        console.log($inp.attributes.type);
-        console.log($inp.attributes.value);
-        console.log($inp.attributes.value.value);
-        console.log($inp.attributes.id.value);
+        // console.log($inp.attributes[1]);
+        // console.log($inp.attributes.type);
+        // console.log($inp.attributes.value);  //value="abc@gmail.com"
+        console.log($inp.attributes.value.value);   // 벨류 속성의 값을 가져와라
+        console.log($inp.attributes.id.value);      // account
 
         $inp.attributes.value.value = 'ddddd@naver.com';
+        // 이 작업을 쉽게 할 수 있게 제공함 2. 속성값 조작보기
 
         $inp.attributes.type.value = 'checkbox';
+        
+
 
     </script>
 

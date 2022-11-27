@@ -7,6 +7,9 @@
     <title>Document</title>
 </head>
 <body>
+
+    <section id="users"></section>
+    <section id="pets"> </section>
     
     <script>
 
@@ -21,14 +24,51 @@
               문자열 데이터라면 text()메서드를 사용합니다.
         */
 
+        /*
         const result = fetch('http://localhost:5000/user')
-        console.log(result);
+        console.log('result: ', result);
 
-        result.then(res => res.json())
-              .then(userList => {
-                  //console.log(userList);
-              });
+        const json = result.then(function(res) {
+            return res.json();
+        });
 
+        console.log('json: ', json);
+
+        json.then(function(userList) {
+            console.log(userList);
+
+            for (let user of userList) {
+                users.innerHTML += `이름: ${user.userName}, 주소: ${user.address} <br>`;
+            }
+        });
+*/
+
+
+
+// 깔끔한 버전
+        fetch('http://localhost:5000/user')
+        .then(res => res.json())
+        .then(userList => {
+                for (let user of userList) {
+                users.innerHTML += `이름: ${user.userName}, 주소: ${user.address} <br>`;
+            }
+        });
+
+        fetch('http://localhost:5000/pets/1')
+          .then(res => res.json())    // response 덩어리로 옴
+          .then(poppy => {
+              pets.innerHTML
+                += `종류: ${poppy.kind} 
+                    이름: ${poppy.name}
+                    나이: ${poppy.age}살`;
+          });
+
+          // 인텔리제이
+          fetch('http://localhost:8181/api/todos')
+          .then(res => res.json())
+          .then(todos => {
+              console.log(todos);
+          });
 
 
     </script>

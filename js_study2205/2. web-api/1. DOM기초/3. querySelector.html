@@ -18,15 +18,18 @@
 
     <script>
 
-        // const $grape = document.querySelector('.grape');
+        const $grape = document.querySelector('.grape');
         // const $grape = document.querySelector('#fruits > li:nth-child(3)');
-        const $grape = document.querySelector('.banana + li');
+        // const $grape = document.querySelector('.banana + li');
         console.log($grape);
 
         $grape.textContent = '맛있는 포도';
 
         const $elems = document.querySelectorAll('.fr');
         console.log($elems);
+
+
+        // $elems[0].textContent = '메롱'; // 데이터가 1개여도 All하면 무조건 배열임
 
         /*
         for (let i = 0; i < $elems.length; i++) {

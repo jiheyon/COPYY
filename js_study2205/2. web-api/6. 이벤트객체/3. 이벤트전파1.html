@@ -35,15 +35,15 @@
 
         $fruits.addEventListener('click', e => {
             console.log('ul태그 클릭이벤트 발생!');
-            console.log('실제로 이벤트가 발생한 곳:', e.target);
-            console.log('이벤트를 걸어놓은 곳:', e.currentTarget);
+            console.log('실제로 이벤트가 발생한 곳:', e.target);    // 실제 이벤트가 터진곳 알려줌
+            console.log('이벤트를 걸어놓은 곳:', e.currentTarget);  // 이벤트 걸린곳을 알려줌
         });
 
         const $grape = $fruits.lastElementChild;
 
-        $grape.addEventListener('click', e => {
-            console.log('grape에서 클릭이벤트 발생!');
-        });
+        // $grape.addEventListener('click', e => {
+        //     console.log('grape에서 클릭이벤트 발생!');
+        // });
 
     </script>
 

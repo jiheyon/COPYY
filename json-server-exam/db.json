@@ -17,6 +17,12 @@
       "kind": "거북이",
       "name": "느림보",
       "age": 99
+    },
+    {
+      "id": 5,
+      "name": "꼬꼬",
+      "kind": "앵무새",
+      "age": 3
     }
   ],
   "user": [
@@ -34,23 +40,23 @@
     },
     {
       "id": 4,
-      "account": "",
-      "userName": "",
-      "password": "",
-      "address": ""
+      "account": "d245",
+      "userName": "김영희",
+      "password": "123",
+      "address": "서울시 강남구"
     },
     {
       "id": "5",
       "account": "peach",
-      "userName": "t",
+      "userName": "최영희",
       "password": "12",
-      "address": "ㅅㅄㅇㅀ"
+      "address": "서울 강동구"
     },
     {
       "id": "6",
-      "account": "peachㅇ",
-      "userName": "사",
-      "password": "12",
+      "account": "peach",
+      "userName": "최영희",
+      "password": "1",
       "address": "사과"
     }
   ]

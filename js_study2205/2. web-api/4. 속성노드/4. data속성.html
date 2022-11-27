@@ -15,16 +15,16 @@
 
     <script>
 
-        const $users = document.querySelector('.users');
+        const $users = document.querySelector('.users');    //ul가져옴
         
-        const [$u1, $u2] = [...$users.children];
+        const [$u1, $u2] = [...$users.children];   //ul자식 자겨와서 찐배열로 변경
 
         console.log($u1.dataset.userNumber);
-        console.log($u2.dataset.role);
+        console.log($u2.dataset.role);  // 어드민이 나옴
 
-        $u2.dataset.role = 'common';
+        $u2.dataset.role = 'common';    // 수정
 
-        $u1.dataset.userAddress = '대전시 서구';
+        $u1.dataset.userAddress = '대전시 서구';  // 추가함
 
         delete $u1.dataset.userAddress;
 

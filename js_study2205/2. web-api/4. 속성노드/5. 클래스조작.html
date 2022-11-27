@@ -15,6 +15,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+      
         }
 
         .red {
@@ -33,7 +34,7 @@
 </head>
 <body>
     
-    <div class="box red">안녕</div>
+    <div class="box red">안녕</div>     
 
     <button id="change">변경!</button>
 
@@ -43,7 +44,7 @@
         // $box.setAttribute('class', 'box blue');
         // $box.setAttribute('class', 'box blue circle');
 
-        //요소에 클래스를 추가
+        //요소에 클래스를 추가 // classList라는걸 사용함
         $box.classList.add('circle');
         $box.classList.add('aaa', 'bbb', 'ccc');
 

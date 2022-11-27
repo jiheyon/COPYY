@@ -17,9 +17,13 @@
         const $msg = document.querySelector('.msg');
 
         $input.addEventListener('keyup', function(e) {
+            console.log(e);
+
+            // $msg.textContent = $input.value;  // 입력 실시간으로 아래창에 들어감    
+
             if (e.key === 'Enter') {
-                $msg.textContent = $input.value;
-                $input.value = '';
+                $msg.textContent = $input.value;    // 내가 적은 값을 p테그의 msg에 옮겨라
+                $input.value = '';                  // 엔터누르면 비우라는 소리임
             }
         });
 

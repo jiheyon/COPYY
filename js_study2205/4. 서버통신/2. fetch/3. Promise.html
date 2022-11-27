@@ -25,7 +25,8 @@
         */
 
         function get(url) {
-            return new Promise((resolve, reject) => {
+            return new Promise((resolve, reject) => {   // 함수
+                                                        // resolve: 성공 / reject 실패값
                 //요청 처리
                 const xhr = new XMLHttpRequest();
                 xhr.open('GET', url);
@@ -34,10 +35,10 @@
                 xhr.onload = e => {
                     if (xhr.status === 200) {
                         //요청 성공시 처리할 콜백
-                        resolve(JSON.parse(xhr.response));
+                        resolve(JSON.parse(xhr.response));      // 서버 통신에 성공했을 때 응답메세지를 담기
                     } else {
                         //요청 실패시 처리할 콜백
-                        reject('통신 실패!');
+                        reject('통신 실패!');                   // 서버 통신에 실패했을 때 응답메세지를 담기
                     }
                 };
             });
@@ -45,7 +46,7 @@
 
         (function() {
 
-            const result = get('http://localhost:5000/user/2');
+            const result = get('http://localhost:5000/user/3');
             console.log(result);
 
             /*
@@ -61,8 +62,8 @@
 
             //2번 파일 콜백지옥 해결 예시
             get('/board/3')
-                .then(bbsInfo => get('/user/' + bbsInfo.userId))
-                .then(userInfo => get('/friend/' + userInfo.friend[6].userId))
+                .then(bbsInfo => get('/user/' + bbsInfo.userId))        // 3번 글 데이터가 들어옴
+                .then(userInfo => get('/friend/' + userInfo.friend[6].userId))  // 
                 .then(friendInfo => {
                     //친구에게 쪽지보내기
                 })
